@@ -1,3 +1,34 @@
+checks:
+  python: |-
+    stack = Stack([5, 6, 7, 8])
+    assert_equal(8, stack.pop())
+    assert_equal(7, stack.pop())
+    assert_equal([5, 6, 4, 2], stack.push([4, 2]))
+    assert_equal([2, 4, 6], stack.pop(3))
+  php: |-
+    $stack = Stack(array(5, 6, 7, 8));
+    assertEqual(8, $stack->pop());
+    assertEqual(7, $stack->pop());
+    assertEqual(array(5, 6, 4, 2), $stack->push(array(4, 2)));
+    assertEqual(array(2, 4, 6), $stack->pop(3));
+  coffeescript: |-
+    stack = new Stack([5, 6, 7, 8])
+    assertEqual(8, stack.pop())
+    assertEqual(7, stack.pop())
+    assertEqual([5, 6, 4, 2], stack.push([4, 2]))
+    assertEqual([2, 4, 6], stack.pop(3))
+  javascript: |-
+    var stack = new Stack([5, 6, 7, 8]);
+    assertEqual(8, stack.pop());
+    assertEqual(7, stack.pop());
+    assertEqual([5, 6, 4, 2], stack.push([4, 2]));
+    assertEqual([2, 4, 6], stack.pop(3));
+  ruby: |-
+    stack = Stack.new([5, 6, 7, 8])
+    assert_equal(8, stack.pop())
+    assert_equal(7, stack.pop())
+    assert_equal([5, 6, 4, 2], stack.push([4, 2]))
+    assert_equal([2, 4, 6], stack.pop(3))
 level: easy
 tags: []
 description: |
@@ -5,16 +36,3 @@ description: |
   All you other developers can't deny
   That linked lists have too much hype
   And you'd rather use a last-in-first-out datatype
-checks:
-  ruby: |-
-    stack = Stack.new([5, 6, 7, 8])
-    assert_equal 8, stack.pop
-    assert_equal 7, stack.pop
-    assert stack.push([4, 2])
-    assert_equal [2, 4, 6], stack.pop(3)
-  javascript: |-
-    stack = new Stack([5, 6, 7, 8])
-    assertEqual(8, stack.pop())
-    assertEqual(7, stack.pop())
-    assert(stack.push([4, 2]))
-    assertEqual([2, 4, 6], stack.pop(3))

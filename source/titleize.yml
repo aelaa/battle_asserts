@@ -1,0 +1,8 @@
+---
+level: elementary
+tags: [string]
+description: |
+  Write function which title every word in string
+
+multicode_checks:
+  langs: [ruby, javascript, php, python]

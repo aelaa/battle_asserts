@@ -1,0 +1,8 @@
+---
+level: easy
+tags: [string]
+description: |
+  Find number missed in arithmetic progression
+
+multicode_checks:
+  langs: [ruby, javascript, php, python]
